@@ -1,0 +1,79 @@
+{
+  "name": "Account",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "nickname": {
+      "type": "string",
+      "required": false
+    },
+    "telephone": {
+      "type": "string",
+      "required": false
+    },
+    "mobile": {
+      "type": "string",
+      "required": false,
+      "index": true
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    },
+    "remarks": {
+      "type": "string",
+      "required": false
+    },
+    "avatar": {
+      "type": "string",
+      "required": false
+    },
+    "fullname": {
+      "type": "string",
+      "required": false
+    },
+    "username": {
+      "type": "string",
+      "index": true
+    },
+    "gender": {
+      "type": "string",
+      "index": true
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "job": {
+      "type": "string",
+      "required": false
+    },
+    "position": {
+      "type": "string",
+      "required": false
+    },
+    "signature": {
+      "type": "string",
+      "required": false
+    },
+    "enabled": {
+      "type": "boolean",
+      "index": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

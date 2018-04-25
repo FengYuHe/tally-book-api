@@ -1,0 +1,27 @@
+{
+  "name": "Record",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "total": {
+      "type": "number",
+      "default": 0
+    },
+    "items": {
+      "type": [
+        "object"
+      ],
+      "default": "[]"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

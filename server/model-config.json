@@ -9,6 +9,8 @@
     "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../node_modules/loopback-shortid-mixin",
       "../common/mixins",
       "./mixins"
     ]
@@ -34,5 +36,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Account": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Record": {
+    "dataSource": "db",
+    "public": true
   }
 }
