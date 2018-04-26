@@ -44,5 +44,13 @@
   "Record": {
     "dataSource": "db",
     "public": true
+  },
+  "Book": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Relation": {
+    "dataSource": "db",
+    "public": true
   }
 }

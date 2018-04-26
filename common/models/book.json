@@ -1,5 +1,5 @@
 {
-  "name": "Record",
+  "name": "Book",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -18,37 +18,27 @@
       "type": "string",
       "id": true
     },
-    "accountId": {
+    "name": {
+      "type": "string",
+      "description": "名称"
+    },
+    "description": {
+      "type": "string",
+      "description": "描述"
+    },
+    "ownerId": {
       "type": "string",
       "index": true,
-      "description": "用户id"
+      "description": "拥有者id"
     },
-    "type": {
-      "type": "string",
-      "index": true,
-      "description": "Income-收入 Expend-支出"
-    },
-    "count": {
+    "limit": {
       "type": "number",
-      "description": "值",
-      "default": 0,
-      "dataType": "decimal",
-      "precision": 8,
-      "scale": 2
+      "description": "人数上限",
+      "default": 5
     },
-    "bookId": {
+    "cover": {
       "type": "string",
-      "index": true,
-      "description": "账本id"
-    },
-    "categoryId": {
-      "type": "string",
-      "index": true,
-      "description": "类型id"
-    },
-    "remark": {
-      "type": "string",
-      "description": "备注"
+      "description": "封面图片"
     }
   },
   "validations": [],

@@ -5,6 +5,14 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "ShortId": {},
+    "TimeStamp": {
+      "createdAt": "createdAt",
+      "updatedAt": "updatedAt",
+      "silenceWarnings": true
+    }
+  },
   "properties": {
     "id": {
       "type": "string",
@@ -56,7 +64,8 @@
     },
     "job": {
       "type": "string",
-      "required": false
+      "required": false,
+      "description": "工作"
     },
     "position": {
       "type": "string",
@@ -70,6 +79,10 @@
       "type": "boolean",
       "index": true,
       "default": true
+    },
+    "integral": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

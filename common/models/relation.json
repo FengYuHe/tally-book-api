@@ -1,5 +1,5 @@
 {
-  "name": "Record",
+  "name": "Relation",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -18,37 +18,21 @@
       "type": "string",
       "id": true
     },
-    "accountId": {
-      "type": "string",
-      "index": true,
-      "description": "用户id"
-    },
     "type": {
       "type": "string",
       "index": true,
-      "description": "Income-收入 Expend-支出"
-    },
-    "count": {
-      "type": "number",
-      "description": "值",
-      "default": 0,
-      "dataType": "decimal",
-      "precision": 8,
-      "scale": 2
+      "default": "Book-Account",
+      "description": "类型，Book-Account：账本与用户"
     },
     "bookId": {
       "type": "string",
       "index": true,
       "description": "账本id"
     },
-    "categoryId": {
+    "accountId": {
       "type": "string",
       "index": true,
-      "description": "类型id"
-    },
-    "remark": {
-      "type": "string",
-      "description": "备注"
+      "description": "用户id"
     }
   },
   "validations": [],
