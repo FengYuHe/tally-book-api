@@ -83,6 +83,9 @@
     "integral": {
       "type": "number",
       "default": 0
+    },
+    "selectBook": {
+      "type": "string"
     }
   },
   "validations": [],
