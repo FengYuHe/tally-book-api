@@ -94,7 +94,8 @@
     "options": {
       "remoting": {
         "sharedMethods": {
-          "*": false
+          "*": false,
+          "getCategoryForMobile": true
         }
       }
     }
