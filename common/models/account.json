@@ -22,74 +22,87 @@
       "type": "string",
       "required": false
     },
-    "telephone": {
+    "email": {
       "type": "string",
-      "required": false
+      "index": true
     },
     "mobile": {
       "type": "string",
       "required": false,
       "index": true
     },
-    "title": {
-      "type": "string",
-      "required": false
-    },
-    "email": {
-      "type": "string",
-      "required": false
-    },
-    "remarks": {
-      "type": "string",
-      "required": false
-    },
     "avatar": {
       "type": "string",
       "required": false
     },
-    "fullname": {
+    "openid": {
       "type": "string",
-      "required": false
+      "index": true,
+      "description": "用户微信openid"
     },
     "username": {
       "type": "string",
-      "index": true
+      "index": {
+        "unique": true
+      }
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
     },
     "gender": {
-      "type": "string",
+      "type": "number",
       "index": true
-    },
-    "birthday": {
-      "type": "date"
-    },
-    "job": {
-      "type": "string",
-      "required": false,
-      "description": "工作"
-    },
-    "position": {
-      "type": "string",
-      "required": false
     },
     "signature": {
       "type": "string",
-      "required": false
+      "default": "你其实不懒的，只是签名可有可无。"
     },
     "enabled": {
       "type": "boolean",
       "index": true,
       "default": true
     },
-    "integral": {
-      "type": "number",
-      "default": 0
-    },
     "selectBook": {
-      "type": "string"
+      "type": "string",
+      "description": "当前选择记账本"
     }
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "me"
+      ]
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "loginForWechat"
+      ]
+    }
+  ],
   "methods": {}
 }

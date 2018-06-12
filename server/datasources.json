@@ -1,12 +1,15 @@
 {
   "db": {
     "host": "localhost",
-    "port": 27017,
-    "url": "",
-    "database": "tally",
-    "password": "",
+    "port": 3306,
+    "database": "tally-book",
+    "password": "root",
     "name": "db",
-    "user": "",
-    "connector": "mongodb"
+    "connector": "mysql",
+    "createDatabase": true,
+    "user": "root",
+    "charset": "utf8mb4",
+    "collation": "utf8mb4_general_ci",
+    "connectionLimit": 20
   }
 }

@@ -18,5 +18,10 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "miniWechat": {
+    "appid": "wxb130ff77cf8b46b1",
+    "appSecret": "0cb28e4fd77bc135f4b77956655e43a1",
+    "login": "https://api.weixin.qq.com/sns/jscode2session"
   }
 }
